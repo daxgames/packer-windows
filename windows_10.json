@@ -225,6 +225,20 @@
       "execute_command": "{{ .Vars }} cmd /c \"{{ .Path }}\"",
       "remote_path": "/tmp/script.bat",
       "scripts": [
+        "./scripts/chocolatey.bat"
+      ],
+      "type": "windows-shell"
+    },
+    {
+      "scripts": [
+        "./scripts/chocopacks.ps1"
+      ],
+      "type": "powershell"
+    },
+    {
+      "execute_command": "{{ .Vars }} cmd /c \"{{ .Path }}\"",
+      "remote_path": "/tmp/script.bat",
+      "scripts": [
         "./scripts/pin-powershell.bat",
         "./scripts/compile-dotnet-assemblies.bat",
         "./scripts/set-winrm-automatic.bat",
