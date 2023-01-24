@@ -14,12 +14,13 @@
         "./scripts/disable-screensaver.ps1",
         "./scripts/disable-winrm.ps1",
         "./scripts/enable-winrm.ps1",
+        "./scripts/enable-winrm.bat",
         "./scripts/microsoft-updates.bat",
         "./scripts/win-updates.ps1"
       ],
       "headless": true,
       "iso_checksum": "{{user `iso_checksum`}}",
-      "iso_url": "{{user `iso_url`}}",      
+      "iso_url": "{{user `iso_url`}}",
       "memory": "{{user `memory`}}",
       "output_directory": "windows_10-qemu",
       "qemuargs": [
@@ -57,6 +58,7 @@
         "./scripts/disable-screensaver.ps1",
         "./scripts/disable-winrm.ps1",
         "./scripts/enable-winrm.ps1",
+        "./scripts/enable-winrm.bat",
         "./scripts/microsoft-updates.bat",
         "./scripts/win-updates.ps1"
       ],
@@ -88,6 +90,7 @@
         "./scripts/disable-screensaver.ps1",
         "./scripts/disable-winrm.ps1",
         "./scripts/enable-winrm.ps1",
+        "./scripts/enable-winrm.bat",
         "./scripts/microsoft-updates.bat",
         "./scripts/win-updates.ps1"
       ],
@@ -125,6 +128,7 @@
         "./scripts/disable-screensaver.ps1",
         "./scripts/disable-winrm.ps1",
         "./scripts/enable-winrm.ps1",
+        "./scripts/enable-winrm.bat",
         "./scripts/microsoft-updates.bat",
         "./scripts/win-updates.ps1"
       ],
@@ -155,6 +159,7 @@
         "./scripts/disable-screensaver.ps1",
         "./scripts/disable-winrm.ps1",
         "./scripts/enable-winrm.ps1",
+        "./scripts/enable-winrm.bat",
         "./scripts/microsoft-updates.bat",
         "./scripts/win-updates.ps1"
       ],
@@ -255,6 +260,8 @@
     "disk_type_id": "1",
     "memory": "2048",
     "headless": "false",
+    "iso_url_": "./iso/Windows_10.iso",
+    "iso_checksum_": "none",
     "iso_checksum": "sha256:69efac1df9ec8066341d8c9b62297ddece0e6b805533fdb6dd66bc8034fba27a",
     "iso_url": "https://software-download.microsoft.com/download/sg/444969d5-f34g-4e03-ac9d-1f9786c69161/19044.1288.211006-0501.21h2_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso",
     "restart_timeout": "5m",
