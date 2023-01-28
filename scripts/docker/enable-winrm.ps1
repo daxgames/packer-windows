@@ -10,6 +10,8 @@ winrm set winrm/config/listener?Address=*+Transport=HTTP '@{Port="5985"}'
 
 if (Test-Path A:\install-containers-feature.ps1) {
   . A:\install-containers-feature.ps1
+} else if (Test-Path e:\install-containers-feature.ps1) {
+  . e:\install-containers-feature.ps1
 }
 
 Stop-Service winrm

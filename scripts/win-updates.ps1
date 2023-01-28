@@ -7,7 +7,7 @@ param($global:RestartRequired = 0,
 
 $Logfile = "C:\Windows\Temp\win-updates.log"
 
-$enable_winrm_script = '$enable_winrm_script'
+$enable_winrm_script = 'a:\enable-winrm.ps1'
 if (test-path 'e:\enable-winrm.ps1') {
   $enable_winrm_script = 'e:\enable-winrm.ps1'
 }
