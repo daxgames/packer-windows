@@ -7,6 +7,11 @@ param($global:RestartRequired = 0,
 
 $Logfile = "C:\Windows\Temp\win-updates.log"
 
+$enable_winrm_script = '$enable_winrm_script'
+if (test-path 'e:\enable-winrm.ps1') {
+  $enable_winrm_script = 'e:\enable-winrm.ps1'
+}
+
 function LogWrite {
   Param ([string]$logstring)
   $now = Get-Date -format s
@@ -33,13 +38,13 @@ function Check-ContinueRestartOrEnd() {
       }
       elseif ($script:Cycles -gt $global:MaxCycles) {
         LogWrite "Exceeded Cycle Count - Stopping"
-        LogWrite "==> Running 'a:\enable-winrm.ps1'..."
-        & "a:\enable-winrm.ps1"
+        LogWrite "==> Running '$enable_winrm_script'..."
+        & $enable_winrm_script
       }
       else {
         LogWrite "Done Installing Windows Updates"
-        LogWrite "==> Running 'a:\enable-winrm.ps1'..."
-        & "a:\enable-winrm.ps1"
+        LogWrite "==> Running '$enable_winrm_script'..."
+        & $enable_winrm_script
       }
     }
     1 {
@@ -140,8 +145,8 @@ function Install-WindowsUpdates()
     LogWrite 'No updates available to install...'
     $global:MoreUpdates = 0
     $global:RestartRequired = 0
-    LogWrite "==> Running 'a:\enable-winrm.ps1'..."
-    & "a:\enable-winrm.ps1"
+    LogWrite "==> Running '$enable_winrm_script'..."
+    & $enable_winrm_script
     break
   }
 
