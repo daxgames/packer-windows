@@ -1,7 +1,7 @@
 rem https://connect.microsoft.com/PowerShell/feedback/details/1609288/pin-to-taskbar-no-longer-working-in-windows-10
 
 set ps_link=A:\WindowsPowerShell.lnk
-if exist e:\WindowsPowerShell.lnk ()
+if exist e:\WindowsPowerShell.lnk (
   set ps_link=e:\WindowsPowerShell.lnk
 )
 
